@@ -4,6 +4,7 @@
 
 ```
 1. Pengenalan kepada arduino
+- 1.0. Installation
 - 1.1. Pengenalan kepada arduino
 - 1.2. Hardware Arduino UNO
 - 1.3. Arduino ADK
@@ -20,3 +21,4 @@
 3. Merancang sukarelawan projek inovasi berasaskan mikrokontroler
 - Perbincangan
 ```
+
