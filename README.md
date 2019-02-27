@@ -3,22 +3,28 @@
 #### Syllabus Content
 
 ```
-1. Pengenalan kepada arduino
-- 1.0. Installation
-- 1.1. Pengenalan kepada arduino
-- 1.2. Hardware Arduino UNO
-- 1.3. Arduino ADK
-- 1.4. Software dan Hardware setup
-- 1.5. Hardware test (blinking led)
+1. Introduction to Arduino
+1.0. Installation
+1.1.  Get to know Arduino
+1.2. Arduino UNO R3 Hardware 
+1.3. Arduino Software
+1.4. mBlock 5 / S4A
+1.5. Software dan Hardware setup
+1.6. Hardware test (LED Blink)
 
-2.  Pengaturcaraan Arduino (GUI / conventional)
-- 2.1. Programming structure
-- 2.2. PinMode - input dan output
-- 2.3. READ/WRITE
-- 2.4. Data type
-- 2.5. Arithmetic and compound
+2.  Arduino Programming  (graphical / conventional)
+2.1. Programming structure
+2.2. pinMode - INPUT dan OUTPUT
+2.3. digital/analog - Read/Write functionality
+2.4. Data types
+2.5. Arithmetic and compound
+2.6. Conditional and Logic
+2.7. Looping
+2.8. Function
 
-3. Merancang sukarelawan projek inovasi berasaskan mikrokontroler
-- Perbincangan
+3. Voluntary innovation project planning based on microcontroller
+3.1. Discussion / Group project
+3.2. Presentation
+
 ```
 
