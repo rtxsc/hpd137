@@ -28,3 +28,12 @@
 
 ```
 
+#### S4A Setup
+
+- [x] Grab the installer from ![S4A](http://s4a.cat)
+
+- [x] For Mac use running on macOS High Sierra and above, enter the following command in the terminal.
+
+```
+sudo xattr -rc /Applications/S4A/ 
+```
