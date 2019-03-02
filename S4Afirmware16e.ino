@@ -64,7 +64,7 @@ pinType;
 
 typedef struct pin {
   pinType type;       //Type of pin
-  int state;         //State of an output
+  int state;          //State of an output
   //byte value;       //Value of an input. Not used by now. TODO
 };
 
@@ -88,28 +88,30 @@ void loop()
   {
     sendUpdateServomotors();
     sendSensorValues();
-    calculateDistance(); //////////////////////////// nueva funcion
+    calculateDistance(); // added function in version 1.6e
     timerCheckUpdate=millis();
   }
 
   readSerialPort();
 }
 
-
 void calculateDistance(){
-  //// Calculo de distancia en cm  desde 2cm a 400cm hecho por http://elprofegarcia.com/
+ 
+long duration, currentDistance, lastReading;
+if(currentDistance > 1) 
+  lastReading=currentDistance;
 
-long duracion, distancia1, distancia0;
-if(distancia1 > 1) distancia0=distancia1;
 pinMode(3, OUTPUT);     // ponemos el pin 3 como salida
 pinMode(A5, INPUT);     // cambiamos el pin como entrada
 digitalWrite(3, HIGH);    // lo activamos
 delayMicroseconds(10);    // esperamos 10 microsegundos
 digitalWrite(3, LOW);     // lo desactivamos
-duracion = pulseIn(A5,HIGH,50000);  // lee el tiempo que tardo el pulso en regresar echo
-distancia1 = (duracion/2) / 29;  // calculo de la distancia en cm
-if (distancia1==0) distancia1=distancia0;
-ScratchBoardSensorReport(5, distancia1);   // Envia la distancia a A5
+duration = pulseIn(A5,HIGH,50000);  // lee el tiempo que tardo el pulso en regresar echo
+currentDistance = (duration/2) / 29;  // calculo de la distancia en cm
+if (currentDistance==0) 
+  currentDistance=lastReading;
+
+ScratchBoardSensorReport(5, currentDistance);   // Envia la distancia a A5
 
 }
 
@@ -120,8 +122,8 @@ void configurePins()
   arduinoPins[0].type=input;
   arduinoPins[1].type=input;
   arduinoPins[2].type=input;
-  ///////////////////////////arduinoPins[3].type=input;
-  arduinoPins[3].type=digital;    // triger del sensor de ultrasonido hc-sr04
+  //arduinoPins[3].type=input;
+  arduinoPins[3].type=digital;    // set as TRIG pin for HC-SR04
   arduinoPins[4].type=servomotor;
   arduinoPins[5].type=pwm;
   arduinoPins[6].type=pwm;
